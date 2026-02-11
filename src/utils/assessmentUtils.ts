@@ -123,9 +123,9 @@ export const generateAISuggestions = (topic: string, question: Question): Partia
         ...mockData,
         options: [
           { id: question.options[0]?.id || generateId(), text: `${topic} is a fundamental concept`, isCorrect: true, feedback: 'Correct! This is the right answer.' },
-          { id: question.options[1]?.id || generateId(), text: `${topic} is obsolete technology`, isCorrect: false, feedback: 'Incorrect. ${topic} is still widely used.' },
-          { id: question.options[2]?.id || generateId(), text: `${topic} only works on Windows`, isCorrect: false, feedback: 'Incorrect. ${topic} is cross-platform.' },
-          { id: question.options[3]?.id || generateId(), text: `${topic} requires no programming`, isCorrect: false, feedback: 'Incorrect. ${topic} requires programming knowledge.' },
+          { id: question.options[1]?.id || generateId(), text: `${topic} is obsolete technology`, isCorrect: false, feedback: `Incorrect. ${topic} is still widely used.` },
+          { id: question.options[2]?.id || generateId(), text: `${topic} only works on Windows`, isCorrect: false, feedback: `Incorrect. ${topic} is cross-platform.` },
+          { id: question.options[3]?.id || generateId(), text: `${topic} requires no programming`, isCorrect: false, feedback: `Incorrect. ${topic} requires programming knowledge.` },
         ],
       };
 
