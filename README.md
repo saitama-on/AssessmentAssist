@@ -16,7 +16,6 @@ a.Flexibility: Questions have polymorphic structure (different fields per type)
 b.Scalability: Easy to add new question types without schema migrations
 c.Performance: Embedded documents (options, items, zones) avoid costly joins
 d.JSON Native: Frontend already uses JSON structure - direct mapping
-e.File Handling: GridFS integration for image storage
 
 Refer the demoSchema.js for detailed schema.
 
