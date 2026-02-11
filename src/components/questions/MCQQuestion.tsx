@@ -1,5 +1,5 @@
 import React from 'react';
-import { MCQQuestion as MCQQuestionType, Purpose } from '../../types';
+import { MCQQuestion as MCQQuestionType } from '../../types';
 import { generateId } from '../../utils/assessmentUtils';
 
 interface MCQQuestionProps {

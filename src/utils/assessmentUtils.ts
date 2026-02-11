@@ -1,4 +1,4 @@
-import { Question, QuestionType, Purpose, BloomsLevel, MCQOption, OrderingItem, HotspotZone } from '../types';
+import { Question, QuestionType, Purpose } from '../types';
 
 export const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
