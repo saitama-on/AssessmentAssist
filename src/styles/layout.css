@@ -1,0 +1,276 @@
+/* Layout components */
+.main-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Header */
+.header {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.header-title-section {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.header-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.header-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-stats-text {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Sections */
+.add-question-section {
+  padding: 32px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.questions-layout {
+  padding: 32px 0;
+}
+
+.section-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  padding: 32px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 24px 0;
+}
+
+/* Question Types Grid */
+.question-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Questions Grid Layout */
+.questions-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 32px;
+  height: calc(100vh - 280px);
+  min-height: 600px;
+}
+
+/* Questions Sidebar */
+.questions-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.question-count {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.questions-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+/* Editor Canvas */
+.editor-canvas {
+  flex: 1;
+  min-width: 0;
+}
+
+.empty-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .questions-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 24px;
+  }
+  
+  .questions-sidebar {
+    order: 2;
+  }
+  
+  .editor-canvas {
+    order: 1;
+  }
+  
+  .sidebar-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content,
+  .main-content {
+    padding: 0 16px;
+  }
+  
+  .header-inner {
+    height: 64px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+  }
+  
+  .header-subtitle {
+    font-size: 14px;
+  }
+  
+  .section-card {
+    padding: 24px;
+  }
+  
+  .question-types-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .add-question-section,
+  .questions-layout {
+    padding: 24px 0;
+  }
+}
+
+/* Legacy grid classes for compatibility */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-6 {
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .md-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .md-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .lg-col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  
+  .lg-col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+}
