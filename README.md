@@ -12,10 +12,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 A . Database Structure Choice
 ->I chose MongoDB with Mongoose because:
 
-a.Flexibility: Questions have polymorphic structure (different fields per type)
-b.Scalability: Easy to add new question types without schema migrations
-c.Performance: Embedded documents (options, items, zones) avoid costly joins
-d.JSON Native: Frontend already uses JSON structure - direct mapping
+a.Flexibility: Questions have polymorphic structure (different fields per type)  
+b.Scalability: Easy to add new question types without schema migrations  
+c.Performance: Embedded documents (options, items, zones) avoid costly joins  
+d.JSON Native: Frontend already uses JSON structure - direct mapping  
 
 Refer the demoSchema.js for detailed schema.
 
